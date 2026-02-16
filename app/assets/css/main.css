@@ -1,3 +1,141 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/Vazir-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/Vazir-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/Vazir.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/Vazir-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/Vazir-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/Farsi-Digits/Vazir-Thin-FD.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/Farsi-Digits/Vazir-Light-FD.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/Farsi-Digits/Vazir-FD.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/Vazir-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/Vazir-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --font-family-base: 'Vazir', sans-serif;
+
+    --font-body-mobile: 16px;
+    --font-body-tablet: 17px;
+    --font-body-desktop: 18px;
+
+    --h1-mobile: 24px;
+    --h1-tablet: 32px;
+    --h1-desktop: 40px;
+
+    --h2-mobile: 20px;
+    --h2-tablet: 26px;
+    --h2-desktop: 32px;
+
+    --h3-mobile: 18px;
+    --h3-tablet: 20px;
+    --h3-desktop: 24px;
+
+    --line-height-body: 1.9;
+    --line-height-heading: 1.4;
+
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-2xl: 48px;
+    --space-3xl: 64px;
+    --space-4xl: 80px;
+    --space-5xl: 96px;
+
+    --container-padding-mobile: 16px;
+    --container-padding-tablet: 24px;
+    --container-padding-desktop: 32px;
+}
+
+html {
+    font-family: var(--font-family-base);
+}
+
+body {
+    font-size: var(--font-body-mobile);
+    line-height: var(--line-height-body);
+}
+
+@media (min-width: 640px) {
+    body {
+        font-size: var(--font-body-tablet);
+    }
+}
+
+@media (min-width: 1024) {
+    body {
+        font-size: var(--font-body-desktop);
+    }
+}
