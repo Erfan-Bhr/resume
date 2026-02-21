@@ -1,8 +1,6 @@
-export type ID = String | Number
 export type Presentage = Number
-export type ISODateString = String
 
-export interface infoSection {
+export interface Info {
     fullName: string
     jobTitle: string
     summary: string
@@ -13,4 +11,18 @@ export interface infoSection {
     telegram: string
     github: string
     gmail: string
+}
+export interface EducationItems {
+    educations: {
+        id: number
+        startYear: number
+        endYear: number
+        university: string
+        degree: string
+    }
+}
+
+export interface Education {
+    educationTitle: string
+    items: EducationItems[]
 }

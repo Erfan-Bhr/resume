@@ -8,36 +8,36 @@
                 src="~/assets/img/ErfanBahari.jpg" alt="عرفان بهاری">
             <div class="flex flex-col items-center lg:flex lg:flex-col lg:items-start">
                 <div class="flex flex-col items-center lg:items-start">
-                    <h1 class="font-bold text-h1-mobile md:text-h1-tablet lg:text-h1-desktop">{{ fullName }}</h1>
-                    <h2 class="font-medium pb-3 text-h2-mobile md:text-h2-tablet lg:text-h2-desktop">{{ jobTitle }}</h2>
+                    <h1 class="font-bold text-h1-mobile md:text-h1-tablet lg:text-h1-desktop">{{ Info.fullName }}</h1>
+                    <h2 class="font-medium pb-3 text-h2-mobile md:text-h2-tablet lg:text-h2-desktop">{{ Info.jobTitle }}</h2>
                 </div>
-                <p class="text-center lg:text-right">{{ summary }}</p>
+                <p class="text-center lg:text-right">{{ Info.summary }}</p>
             </div>
         </div>
         <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-2 lg:grid-cols-3 lg:gap-y-4 lg:gap-x-16">
             <div class="flex items-center gap-2">
                 <Icon icon="mdi:calendar" class="w-6 h-6" />
-                <p>{{ birthday }}</p>
+                <p>{{ Info.birthday }}</p>
             </div>
             <div class="flex items-center gap-2">
                 <Icon icon="mdi:location" class="w-6 h-6" />
-                <p>{{ placeOfResidence }}</p>
+                <p>{{ Info.placeOfResidence }}</p>
             </div>
             <div class="flex items-center gap-2">
                 <Icon icon="mdi:phone" class="w-6 h-6" />
-                <p>{{ phone }}</p>
+                <p>{{ Info.phone }}</p>
             </div>
             <div class="flex items-center gap-2">
                 <Icon icon="mdi:telegram" class="w-6 h-6" />
-                <p>{{ telegram }}</p>
+                <p>{{ Info.telegram }}</p>
             </div>
             <div class="flex items-center gap-2">
                 <Icon icon="mdi:github" class="w-6 h-6" />
-                <p>{{ github }}</p>
+                <p>{{ Info.github }}</p>
             </div>
             <div class="flex items-center gap-2">
                 <Icon icon="mdi:email" class="w-6 h-6" />
-                <p>{{ gmail }}</p>
+                <p>{{ Info.gmail }}</p>
             </div>
         </div>
     </section>
@@ -49,7 +49,7 @@
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { useResumeData } from "../composables/useResumeData";
 
-const { fullName, jobTitle, summary, birthday, placeOfResidence, phone, telegram, github, gmail } = useResumeData()
+const { Info } = useResumeData()
 
 const cardRef = ref<HTMLElement | null>(null);
 
